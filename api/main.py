@@ -20,10 +20,10 @@ def predict():
         body = schema.load(request.json)
         dataframe_format = dict(
             BCA=[body["current_account_balance"]],
-            GGSB=[body["general_governemnt_structural_balance"]],
+            PPPEX=[body["implied_ppp_conversion_rate"]],
             LE=[body["employment"]],
-            LUR=[body["implied_ppp_conversion_rate"]],
-            GGXWDN=[body["consumer_price_index"]],
+            LUR=[body["unemployment_rate"]],
+            PCPI=[body["average_consumer_price_inflation_index"]],
             Continent=[body["continent"]],
             LP=[body["population"]],
             NGSD_NGDP=[body["gross_nation_savings"]],
