@@ -17,14 +17,14 @@ class PredictTestCase(unittest.TestCase):
 
     def test_post_predict(self):
         request_body = {
-            "consumer_price_index": 39.685,
+            "average_consumer_price_inflation_index": 85.95,
             "continent": "Australia",
             "current_account_balance": -10.668,
             "employment": 7.666,
-            "general_governemnt_structural_balance": -18.328,
+            "implied_ppp_conversion_rate": 17.023,
             "gross_nation_savings": 20.897,
-            "implied_ppp_conversion_rate": 10.883,
-            "population": 17.719,
+            "unemployment_rate": 5.392,
+            "population": 17.719
         }
         response = self.client.post("/", json=request_body)
         assert response.status_code == 200
